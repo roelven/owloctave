@@ -199,3 +199,25 @@ h2 {
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
+
+/* Error and loading states for owls */
+.keys .owl.error {
+  opacity: 0.3;
+  cursor: not-allowed;
+  filter: grayscale(100%);
+}
+
+.keys .owl.buffering {
+  opacity: 0.7;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Smooth transitions */
+.keys .owl {
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}

@@ -1,0 +1,15 @@
+name = "owl-octave-token"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Environment variables will be set via `wrangler secret put`
+# Do not put actual secrets in this file!
+
+[env.production]
+# Production environment settings
+routes = [
+  { pattern = "token.owloctave.com", custom_domain = true }
+]
+
+[env.staging]
+# Staging environment for testing
